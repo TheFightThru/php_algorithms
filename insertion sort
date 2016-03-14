@@ -1,0 +1,24 @@
+<html>
+<body>
+    <?php
+    
+    $arr = array(5,2,4,6,1,3);
+    
+    for($i = 1; $i<count($arr); $i++){
+        $val = $arr[$i];
+        $j = $i-1;
+        while($j>=0 and $arr[$j]>$val){
+            $arr[$j+1]=$arr[$j];
+            $j=$j-1;
+            
+        }
+        
+        $arr[$j+1]=$val;
+    }
+    
+    print_r( array_values( $arr ));
+    
+    ?>
+</body>
+
+</html>
